@@ -1,16 +1,14 @@
 import java.util.Arrays;
 
 import Tasks.MergeSortedArrays;
+import static Tasks.RemoveElement.removeElement;
 
 public class Main {
 
     public static void main(String[] args) {
-        int m = 3;
-        int[] nums1 = new int[] { 1, 2, 3, 0, 0, 0 };
+        int[] nums = new int[] { 0,1,2,2,3,0,4,2 };
+        int val = 2;
 
-        int n = 3;
-        int[] nums2 = new int[] { 2, 5, 6 };
-
-        MergeSortedArrays.merge(nums1, m, nums2, n);
+        int k = removeElement(nums, val);
     }
 }
