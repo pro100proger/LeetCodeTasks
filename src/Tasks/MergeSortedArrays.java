@@ -16,7 +16,8 @@ import java.util.stream.IntStream;
     and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
  */
 public class MergeSortedArrays {
-    ////      First variant
+
+    ////      First variant with bad time complexity
     //        public static void merge(int[] nums1, int m, int[] nums2, int n) {
     //            for (int i = m, j = 0; i < m + n; i++, j++) {
     //                nums1[i] = nums2[j];
@@ -41,7 +42,7 @@ public class MergeSortedArrays {
         System.out.println(Arrays.toString(nums1));
     }
 
-    ////   Third variant
+    ////   Third variant with streams
     //    public static void merge(int[] nums1, int m, int[] nums2, int n) {
     //        nums1 = IntStream.concat(Arrays.stream(nums1, 0, m), Arrays.stream(nums2))
     //            .sorted()
@@ -50,6 +51,7 @@ public class MergeSortedArrays {
     //        System.arraycopy(nums1, 0, nums1, 0, m + n); // Запис назад у nums1
     //        System.out.println(Arrays.toString(nums1));
     //    }
+
 
     ////    Code for main to test the methods
     //    int m = 3;

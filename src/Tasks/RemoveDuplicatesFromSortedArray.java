@@ -17,4 +17,17 @@ package Tasks;
  */
 public class RemoveDuplicatesFromSortedArray {
 
+    public static int removeDuplicates(int[] nums) {
+        int occupiedPlace = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {
+                nums[occupiedPlace++] = nums[i];
+            }
+        }
+        return occupiedPlace;
+    }
+
+    //    //    Code for main to test the methods
+    //    int[] nums = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+    //    int k = removeDuplicates(nums);
 }
