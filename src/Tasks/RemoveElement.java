@@ -12,8 +12,7 @@ public class RemoveElement {
             } else {
                 if (countVal == 0) {
                     occupiedPlace++;
-                }
-                else {
+                } else {
                     nums[occupiedPlace++] = nums[i];
                     nums[i] = val;
                 }
@@ -23,14 +22,20 @@ public class RemoveElement {
         return nums.length - countVal;
     }
 
-//    Short variant
-//    public static int removeElement(int[] nums, int val) {
-//        int k = 0;
-//        for (int i = 0; i < nums.length; i++) {
-//            if (nums[i] != val) {
-//                nums[k++] = nums[i];
-//            }
-//        }
-//        return k;
-//    }
+    ////    Short variant with mess in array
+    //    public static int removeElement(int[] nums, int val) {
+    //        int k = 0;
+    //        for (int i = 0; i < nums.length; i++) {
+    //            if (nums[i] != val) {
+    //                nums[k++] = nums[i];
+    //            }
+    //        }
+    //        return k;
+    //    }
+
+    ////    Code for main to test the methods
+    //    int[] nums = new int[] { 0,1,2,2,3,0,4,2 };
+    //    int val = 2;
+    //
+    //    int k = removeElement(nums, val);
 }
