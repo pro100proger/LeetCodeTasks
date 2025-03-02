@@ -19,6 +19,8 @@ import java.util.Arrays;
 public class RemoveElement {
 
     public static int removeElement(int[] nums, int val) {
+        if (nums.length <= 2) return nums.length;
+
         int countVal = 0, occupiedPlace = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == val) {

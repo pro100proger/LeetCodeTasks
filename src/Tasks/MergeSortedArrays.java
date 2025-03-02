@@ -28,6 +28,9 @@ public class MergeSortedArrays {
 
     // Second variant
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        if (nums1.length <= 2) return;
+        if (nums2.length <= 2) return;
+
         int i = m - 1;
         int j = n - 1;
         int k = m + n - 1;

@@ -18,6 +18,8 @@ package Tasks;
 public class RemoveDuplicatesFromSortedArray {
 
     public static int removeDuplicates(int[] nums) {
+        if (nums.length <= 2) return nums.length;
+
         int occupiedPlace = 1;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] != nums[i - 1]) {
