@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.Arrays;
+
 /*
         Task 4
     Given an integer array nums sorted in non-decreasing order,
@@ -20,7 +22,19 @@ package Tasks;
     by modifying the input array in-place with O(1) extra memory.
  */
 public class IIRemoveDuplicatesFromSortedArray {
-    public int removeDuplicates(int[] nums) {
-        return 1;
+    public static int IIRemoveDuplicates(int[] nums) {
+        int occupiedPlace = 1, occurrenceCounter = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                occurrenceCounter++;
+            } else {
+                occurrenceCounter = 1;
+            }
+            if (occurrenceCounter <= 2) {
+                nums[occupiedPlace++] = nums[i];
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+        return occupiedPlace;
     }
 }
