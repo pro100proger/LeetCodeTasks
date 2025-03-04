@@ -16,22 +16,39 @@ import java.util.Arrays;
     rotate 3 steps to the right: [5,6,7,1,2,3,4]
  */
 public class RotateArray {
-    //  First variant with bad time complexity O(n*k)
+    //  First variant
     public static void rotate(int[] nums, int k) {
         k = k % nums.length;
-        for (int i = 0; i < k; i++) {
-            int lastElement = nums[nums.length - 1];
-            for (int j = nums.length - 1; j > 0; j--) {
-                nums[j] = nums[j - 1];
-            }
-            nums[0] = lastElement;
-            System.out.println(Arrays.toString(nums));
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+        System.out.println(Arrays.toString(nums));
+    }
+    private static void reverse(int[] nums, int left, int right) {
+        while (left < right) {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
         }
     }
 
+    //    //  Second variant with bad time complexity O(n*k)
+    //    public static void rotate(int[] nums, int k) {
+    //        k = k % nums.length;
+    //        for (int i = 0; i < k; i++) {
+    //            int lastElement = nums[nums.length - 1];
+    //            for (int j = nums.length - 1; j > 0; j--) {
+    //                nums[j] = nums[j - 1];
+    //            }
+    //            nums[0] = lastElement;
+    //            System.out.println(Arrays.toString(nums));
+    //        }
+    //    }
 
-//    //    Code for main to test the methods
-//    int[] nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-//    int k = 3;
-//    rotate(nums, k);
+    //    //    Code for main to test the methods
+    //    int[] nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+    //    int k = 3;
+    //    rotate(nums, k);
 }
