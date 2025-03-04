@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.Arrays;
+
 /*
         Task 6
     Given an integer array nums, rotate the array
@@ -14,7 +16,15 @@ package Tasks;
     rotate 3 steps to the right: [5,6,7,1,2,3,4]
  */
 public class RotateArray {
-    public void rotate(int[] nums, int k) {
-
+    //  First variant with bad time complexity O(n*k)
+    public static void rotate(int[] nums, int k) {
+        for (int i = 0; i < k; i++) {
+            int lastElement = nums[nums.length - 1];
+            for (int j = nums.length - 1; j > 0; j--) {
+                nums[j] = nums[j - 1];
+            }
+            nums[0] = lastElement;
+            System.out.println(Arrays.toString(nums));
+        }
     }
 }
