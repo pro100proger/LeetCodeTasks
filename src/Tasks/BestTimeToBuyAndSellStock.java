@@ -43,4 +43,9 @@ public class BestTimeToBuyAndSellStock {
 
         return maxProfit;
     }
+
+    //    //    Code for main to test the methods
+    //    int[] prices = new int[] { 7,1,5,3,6,4 };
+    //    int k = maxProfit(prices);
+    //    System.out.println(k);
 }

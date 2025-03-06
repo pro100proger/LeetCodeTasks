@@ -1,5 +1,5 @@
 
-import static Tasks.BestTimeToBuyAndSellStock.maxProfit;
+import static Tasks.IIBestTimeToBuyAndSellStock.maxProfit;
 
 public class Main {
 
