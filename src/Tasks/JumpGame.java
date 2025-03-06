@@ -15,7 +15,8 @@ package Tasks;
  */
 public class JumpGame {
     public static boolean canJump(int[] nums) {
-        if (nums.length <= 1) return true;
+        if (nums.length <= 1)
+            return true;
 
         int remainingLength = nums.length - 1;
         for (int i = nums.length - 2; i >= 0; i--) {
@@ -25,4 +26,9 @@ public class JumpGame {
         }
         return remainingLength == 0;
     }
+
+    //    //    Code for main to test the methods
+    //    int[] nums = new int[] { 3,2,1,0,4 };
+    //    boolean k = canJump(nums);
+    //    System.out.println(k);
 }

@@ -1,5 +1,4 @@
 
-import static Tasks.IIBestTimeToBuyAndSellStock.maxProfit;
 import static Tasks.JumpGame.canJump;
 
 public class Main {
