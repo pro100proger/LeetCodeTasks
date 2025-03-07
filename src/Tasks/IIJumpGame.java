@@ -19,7 +19,8 @@ package Tasks;
  */
 public class IIJumpGame {
     public static int jump(int[] nums) {
-        if (nums.length <= 1) return 0;
+        if (nums.length <= 1)
+            return 0;
 
         int jumps = 0;
         int currentEnd = 0;
@@ -39,4 +40,9 @@ public class IIJumpGame {
         }
         return jumps;
     }
+
+    //    //    Code for main to test the methods
+    //    int[] nums = new int[] { 2, 3, 1, 1, 4 };
+    //    int k = jump(nums);
+    //    System.out.println(k);
 }
