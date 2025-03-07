@@ -19,6 +19,24 @@ package Tasks;
  */
 public class IIJumpGame {
     public static int jump(int[] nums) {
-        return 1;
+        if (nums.length <= 1) return 0;
+
+        int jumps = 0;
+        int currentEnd = 0;
+        int farthest = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (i + nums[i] > farthest) {
+                farthest = i + nums[i];
+            }
+            if (i == currentEnd) {
+                jumps++;
+                currentEnd = farthest;
+
+                if (currentEnd >= nums.length - 1) {
+                    break;
+                }
+            }
+        }
+        return jumps;
     }
 }
