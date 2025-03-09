@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.Arrays;
+
 /*
         Task 11
     Given an array of integers citations where citations[i]
@@ -21,7 +23,21 @@ package Tasks;
     than 3 citations each, their h-index is 3.
  */
 public class HIndex {
-    public int hIndex(int[] citations) {
-        return 1;
+    public static int hIndex(int[] citations) {
+        Arrays.sort(citations);
+
+        int n = citations.length;
+        for (int i = 0; i < n; i++) {
+            int remainingPapers = n - i;
+            if (citations[i] >= remainingPapers) {
+                return remainingPapers;
+            }
+        }
+        return 0;
     }
+
+    //    //    Code for main to test the methods
+    //    int[] citations = {2,9,7,3,2,6};
+    //    int h = hIndex(citations);
+    //    System.out.println(h);
 }
