@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.*;
+
 /*
         Task 12
     Implement the RandomizedSet class:
@@ -17,9 +19,15 @@ package Tasks;
     that each function works in average O(1) time complexity.
  */
 public class InsertDeleteGetRandomO1 {
+    private Map<Integer, Integer> map;
+    private List<Integer> list;
+    private Random random;
+
 
     public InsertDeleteGetRandomO1() {
-
+        map = new HashMap<>();
+        list = new ArrayList<>();
+        random = new Random();
     }
 
     public boolean insert(int val) {
