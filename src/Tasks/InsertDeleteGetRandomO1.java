@@ -44,6 +44,6 @@ public class InsertDeleteGetRandomO1 {
     }
 
     public int getRandom() {
-        return 1;
+        return list.get(random.nextInt(list.size()));
     }
 }
