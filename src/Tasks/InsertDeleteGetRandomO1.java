@@ -31,6 +31,11 @@ public class InsertDeleteGetRandomO1 {
     }
 
     public boolean insert(int val) {
+        if (map.containsKey(val)) {
+            return false;
+        }
+        map.put(val, list.size());
+        list.add(val);
         return true;
     }
 
